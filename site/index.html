@@ -11,8 +11,13 @@
 
     <!-- Google fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair%20Display">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT%20Serif">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Epilogue">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira%20Code">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=JetBrains%20Mono">
+
+    <!-- Syntax highlighting -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/base16/tomorrow-night.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
 
     <!-- Local styles -->
     <link rel="stylesheet" href="css/style.css">
@@ -26,34 +31,42 @@
         </ul>
     </nav>
 
-    <main id="main-content">
-        <h1>Hello, world.</h1>
-
-        <!-- <h1>H1</h1>
-        <h2>H2</h2>
-        <h3>H3</h3>
-        <h4>H4</h4>
-        <h5>H5</h5>
-        <h6>H6</h6> -->
-
-        <div class="quote">
-            <blockquote>
-                <p>I have a foreboding of an America in my children's or grandchildren's time -- when the United States is a service and information economy; when nearly all the manufacturing industries have slipped away to other countries; when awesome technological powers are in the hands of a very few, and no one representing the public interest can even grasp the issues; when the people have lost the ability to set their own agendas or knowledgeably question those in authority; when, clutching our crystals and nervously consulting our horoscopes, our critical faculties in decline, unable to distinguish between what feels good and what's true, we slide, almost without noticing, back into superstition and darkness...</p>
-                <p>The dumbing down of America is most evident in the slow decay of substantive content in the enormously influential media, the 30 second sound bites (now down to 10 seconds or less), lowest common denominator programming, credulous presentations on pseudoscience and superstition, but especially a kind of celebration of ignorance.</p>
-            </blockquote>
-            <cite>Carl Sagan, 1995</cite>
+    <main>
+        <div id="main-content">
+            <h1>Hello, world.</h1>
+    
+            <!-- <h1>H1</h1>
+            <h2>H2</h2>
+            <h3>H3</h3>
+            <h4>H4</h4>
+            <h5>H5</h5>
+            <h6>H6</h6> -->
+    
+            <div class="quote">
+                <blockquote>
+                    <p>I have a foreboding of an America in my children's or grandchildren's time -- when the United States is a service and information economy; when nearly all the manufacturing industries have slipped away to other countries; when awesome technological powers are in the hands of a very few, and no one representing the public interest can even grasp the issues; when the people have lost the ability to set their own agendas or knowledgeably question those in authority; when, clutching our crystals and nervously consulting our horoscopes, our critical faculties in decline, unable to distinguish between what feels good and what's true, we slide, almost without noticing, back into superstition and darkness...</p>
+                    <p>The dumbing down of America is most evident in the slow decay of substantive content in the enormously influential media, the 30 second sound bites (now down to 10 seconds or less), lowest common denominator programming, credulous presentations on pseudoscience and superstition, but especially a kind of celebration of ignorance.</p>
+                </blockquote>
+                <cite class="blockquote">Carl Sagan, 1995</cite>
+            </div>
+    
+            <div class="quote">
+                <q>Some short quote, not necessitating a full paragraph.</q>
+                <cite>Mark Twain (probably)</cite>
+            </div>
+    
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet nunc ac lacus tempor semper. Suspendisse quis erat metus. Donec condimentum ligula condimentum, tincidunt mauris id, tincidunt purus. Duis eros risus, condimentum nec fringilla at, hendrerit non nisi. Quisque sodales lacus nec nunc egestas, ut consectetur augue condimentum. Curabitur convallis ac metus sed commodo. Vivamus sollicitudin a diam ac accumsan. Pellentesque feugiat nunc odio, nec auctor quam hendrerit sodales. Etiam suscipit, dui vitae ultrices condimentum, quam magna iaculis ipsum, in suscipit metus arcu in neque. Nulla ac dolor sem.</p>
+            <p>Vestibulum ac purus ut turpis <code class="language-python">inline code</code> sodales mattis. Phasellus eleifend mattis nisi. Pellentesque bibendum, magna non fringilla congue, ex dui dictum urna, in pulvinar sem tortor lacinia dolor. Sed nec eleifend quam, quis porttitor urna. Praesent sit amet molestie turpis. Ut scelerisque condimentum massa ut ultricies. Curabitur vitae eros facilisis, molestie massa non, euismod turpis.</p>
+    
+    <pre><code class="language-python">def playlist(songs):
+        valid_pairs = 0
+        for i in range(len(songs) - 1):
+            for j in range(i + 1, len(songs)):
+                if (songs[i] + songs[j]) % 60 == 0:
+                    valid_pairs += 1
+                    print(f'{i} + {j}: {songs[i]} + {songs[j]}')
+        return valid_pairs</code></pre>
         </div>
-
-        <div class="quote">
-            <q>Some short quote, not necessitating a full paragraph.</q>
-            <cite>Abraham Lincoln (probably)</cite>
-        </div>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet nunc ac lacus tempor semper. Suspendisse quis erat metus. Donec condimentum ligula condimentum, tincidunt mauris id, tincidunt purus. Duis eros risus, condimentum nec fringilla at, hendrerit non nisi. Quisque sodales lacus nec nunc egestas, ut consectetur augue condimentum. Curabitur convallis ac metus sed commodo. Vivamus sollicitudin a diam ac accumsan. Pellentesque feugiat nunc odio, nec auctor quam hendrerit sodales. Etiam suscipit, dui vitae ultrices condimentum, quam magna iaculis ipsum, in suscipit metus arcu in neque. Nulla ac dolor sem.</p>
-        <p>Vestibulum ac purus ut turpis <code>inline code</code> sodales mattis. Phasellus eleifend mattis nisi. Pellentesque bibendum, magna non fringilla congue, ex dui dictum urna, in pulvinar sem tortor lacinia dolor. Sed nec eleifend quam, quis porttitor urna. Praesent sit amet molestie turpis. Ut scelerisque condimentum massa ut ultricies. Curabitur vitae eros facilisis, molestie massa non, euismod turpis.</p>
-
-        <pre><code>preformatted code block</code></pre>
-
     </main>
 
     <footer class="watermark noselect">Copyright notice</footer>
@@ -61,6 +74,10 @@
     <!-- https://feathericons.com/ -->
     <script src="https://unpkg.com/feather-icons"></script>
     <script>feather.replace()</script>
+
+    <!-- https://highlightjs.org/usage/ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 
     <script src="js/script.js"></script>
 </body>
