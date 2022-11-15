@@ -34,6 +34,7 @@ p {
     max-width: 750px;
     line-height: 145%;
     margin: 1em auto;
+    text-indent: 2em;
 }
 
 /* Basic top navbar */
@@ -85,8 +86,8 @@ nav li:hover:not(.active) {
 .rounded {
     border-radius: 6px;
 }
-.indent {
-    text-indent: 2em;
+.noindent {
+    text-indent: 0;
 }
 .watermark {
     position: fixed;
