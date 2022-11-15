@@ -1,8 +1,9 @@
+/* General Styling */
 body {
-    margin: 0;
+    margin: 0 0 3em 0;
     text-align: center;
-    font-family: 'Epilogue', sans-serif;
     text-rendering: optimizeLegibility;
+    font-family: 'Epilogue', sans-serif;
 }
 #main-content {
     margin: 5em 1em 0 1em;
@@ -29,12 +30,84 @@ h5, .h5 {
 h6, .h6 {
     font-size: 1em;
 }
-p {
+p, code, pre, q {
     text-align: left;
-    max-width: 750px;
+}
+p {
     line-height: 145%;
     margin: 1em auto;
     text-indent: 2em;
+}
+p, pre {
+    max-width: 750px;
+}
+
+/* Code blocks */
+code, pre, samp {
+    font-family: "Fira Code", "Consolas", monospace;
+    background-color: #7c82af;
+    color: white;
+    padding: 1px 4px;
+    line-height: normal;
+}
+pre {
+    margin: auto;
+    white-space: pre-wrap;
+    background-color: #484b62;
+    padding: 0.5em;
+}
+pre code {
+    background-color: unset;
+}
+code {
+    border-radius: 3px;
+}
+
+
+/* Quotes */
+blockquote, q, .quote {
+    max-width: 600px;
+}
+blockquote, q {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1em;
+    font-style: oblique;
+    margin: auto;
+}
+blockquote {
+    position: relative;
+}
+blockquote p {
+    text-align: justify;
+}
+blockquote:before {
+    content: open-quote;
+    position: absolute;
+    font-size: 600%;
+    left: -0.6em;
+    top: -0.25em;
+}
+blockquote:after {
+    content: close-quote;
+    position: absolute;
+    font-size: 600%;
+    right: -0.35em;
+    bottom: -0.6em;
+    line-height: normal;
+}
+.quote cite {
+    display: block;
+    margin-top: 0.5em;
+}
+cite:before {
+    content: "— ";
+    margin-right: 0;
+    margin-left: auto;
+}
+.quote {
+    margin: 2em auto;
+    text-align: right;
+    width: fit-content;
 }
 
 /* Basic top navbar */
@@ -65,7 +138,7 @@ nav a {
     text-decoration: none;
     color: white;
     display: block;
-    padding: 0 1em;
+    padding-top: 3px;
     /* Puts text and images in the same link inline with each other */
     display: flex;
     flex-direction: row;
@@ -78,17 +151,26 @@ nav .active {
 nav li:hover:not(.active) {
     background-color: rgba(112, 118, 161, 0.66);
 }
+nav svg {
+    margin: 0 0.5em;
+    position: relative;
+    top: -3px;
+}
 
 /* Utility classes */
-.icon {
-    margin: 0 0.5em;
+.noindent {
+    text-indent: 0;
+}
+.noselect {
+    user-select: none;
+    -webkit-user-select: none;
 }
 .rounded {
     border-radius: 6px;
 }
-.noindent {
-    text-indent: 0;
-}
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
 .watermark {
     position: fixed;
     bottom: 0px;
@@ -98,9 +180,16 @@ nav li:hover:not(.active) {
     border-radius: 6px 0 0 0;
     background-color: black;
     color: white;
-    opacity: 0.3;
+    opacity: 0.5;
 }
-.noselect {
-    user-select: none;
-    -webkit-user-select: none;
+
+/* Shadow settings based on Bootstrap 5 */
+.shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important;
+}
+.shadow {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+}
+.shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
 }
