@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    text-align: center;
+    font-family: 'Epilogue', sans-serif;
+    text-rendering: optimizeLegibility;
+}
+#main-content {
+    margin: 5em 1em 0 1em;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    line-height: normal;
+}
+h1, .h1 {
+    font-size: 4em;
+}
+h2, .h2 {
+    font-size: 3em;
+}
+h3, .h3 {
+    font-size: 2.4em;
+}
+h4, .h4 {
+    font-size: 1.8em;
+}
+h5, .h5 {
+    font-size: 1.3em;
+}
+h6, .h6 {
+    font-size: 1em;
+}
+p {
+    text-align: left;
+    max-width: 750px;
+    line-height: 145%;
+    margin: 1em auto;
+}
+
+/* Basic top navbar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(15, 18, 48, 0.76);
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+}
+nav li {
+    float: left;
+    color: white;
+    height: 100%;
+    margin: auto;
+    vertical-align: middle;
+    height: 3em;
+    line-height: 3em;
+    flex: 1;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 0 1em;
+    /* Puts text and images in the same link inline with each other */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+nav .active {
+    background-color: rgba(150, 158, 214, 0.66);
+}
+nav li:hover:not(.active) {
+    background-color: rgba(112, 118, 161, 0.66);
+}
+
+/* Utility classes */
+.icon {
+    margin: 0 0.5em;
+}
+.rounded {
+    border-radius: 6px;
+}
+.indent {
+    text-indent: 2em;
+}
+.watermark {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    font-size: small;
+    padding: 8px 10px 2px;
+    border-radius: 6px 0 0 0;
+    background-color: black;
+    color: white;
+    opacity: 0.3;
+}
+.noselect {
+    user-select: none;
+    -webkit-user-select: none;
+}
